@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Simulador de Futebol</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+
+    <header
+        id="cabecalhoClube"
+        class="oculto"
+    >
+
+        <div>
+
+            <h2 id="nomeClubeHeader">
+                Meu Clube
+            </h2>
+
+        </div>
+
+        <div>
+
+            💰
+            <span id="dinheiroHeader">
+                €0
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =========================================
+             CRIAÇÃO
+        ========================================== -->
+
+        <section
+            id="telaCriacao"
+            class="tela"
+        >
+
+            <div class="card">
+
+    <!-- MENU INICIAL -->
+
+    <div id="menuInicial">
+
+        <h1>
+            ⚽ Simulador de Futebol
+        </h1>
+
+        <p>
+            Crie seu próprio clube ou continue sua carreira.
+        </p>
+
+        <button id="btnNovoClube">
+            🆕 Novo Clube
+        </button>
+
+        <button id="btnContinuar">
+            ▶️ Continuar
+        </button>
+
+        <button id="btnApagarSave">
+            🗑️ Apagar Save
+        </button>
+
+    </div>
+
+
+    <!-- CRIAÇÃO DO CLUBE -->
+
+    <div
+        id="formularioCriacao"
+        class="oculto"
+    >
+
+        <h1>
+            ⚽ Criar Clube
+        </h1>
+
+        <p>
+            Crie seu próprio clube.
+        </p>
+
+
+        <label>
+            Nome do clube
+        </label>
+
+        <input
+            id="nomeClube"
+            type="text"
+            placeholder="Ex: FC Diogo"
+        >
+
+
+        <label>
+            País
+        </label>
+
+        <select id="paisClube">
+
+            <option value="">
+                Escolha um país
+            </option>
+
+            <option value="Inglaterra">
+                Inglaterra
+            </option>
+
+            <option value="França">
+                França
+            </option>
+
+            <option value="Espanha">
+                Espanha
+            </option>
+
+            <option value="Alemanha">
+                Alemanha
+            </option>
+
+            <option value="Itália">
+                Itália
+            </option>
+
+            <option value="Portugal">
+                Portugal
+            </option>
+
+        </select>
+
+
+        <button id="btnCriarClube">
+            Criar Clube
+        </button>
+
+    </div>
+
+</div>
+
+        </section>
+
+
+        <!-- =========================================
+             PRINCIPAL
+        ========================================== -->
+
+        <section
+            id="telaPrincipal"
+            class="tela oculto"
+        >
+
+            <div class="card">
+
+                <h1 id="tituloClube">
+                    Meu Clube
+                </h1>
+
+
+                <div class="info-grid">
+
+                    <div>
+
+                        <strong>
+                            País
+                        </strong>
+
+                        <span id="infoPais">
+                            -
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Dinheiro
+                        </strong>
+
+                        <span id="infoDinheiro">
+                            €0
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Temporada
+                        </strong>
+
+                        <span id="infoTemporada">
+                            1
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Overall
+                        </strong>
+
+                        <span id="infoOverall">
+                            0
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="menu">
+
+                    <button id="btnElenco">
+                        👥 Elenco
+                    </button>
+
+                    <button id="btnMercado">
+                        💰 Mercado
+                    </button>
+
+                    <button id="btnIniciarTemporada">
+                        ⚽ Iniciar Temporada
+                    </button>
+
+                    <button id="btnHistorico">
+                        🏆 Histórico
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             ELENCO
+        ========================================== -->
+
+        <section
+            id="telaElenco"
+            class="tela oculto"
+        >
+
+            <div class="card">
+
+                <h2>
+                    👥 Elenco
+                </h2>
+
+
+                <div id="escalacao">
+                </div>
+
+
+                <hr>
+
+
+                <div id="listaElenco">
+                </div>
+
+
+                <button
+                    id="btnVoltarElenco"
+                    class="btn-secundario"
+                >
+                    Voltar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             MERCADO
+        ========================================== -->
+
+        <section
+            id="telaMercado"
+            class="tela oculto"
+        >
+
+            <div class="card">
+
+                <h2>
+                    💰 Mercado
+                </h2>
+
+
+                <h3>
+                    Jogadores disponíveis
+                </h3>
+
+                <div id="listaMercado">
+                </div>
+
+
+                <hr>
+
+
+                <h3>
+                    Seu elenco
+                </h3>
+
+                <div id="listaVenda">
+                </div>
+
+
+                <button
+                    id="btnVoltarMercado"
+                    class="btn-secundario"
+                >
+                    Voltar
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             TEMPORADA
+        ========================================== -->
+
+        <section
+            id="telaTemporada"
+            class="tela oculto"
+        >
+
+            <div class="card">
+
+                <h2 id="tituloCompeticao">
+                    Campeonato Nacional
+                </h2>
+
+
+                <div id="informacoesPartida">
+                </div>
+
+
+                <div id="resultadoPartida">
+                </div>
+
+
+                <div class="botoes-partida">
+
+                    <button
+                        id="btnJogarPartida"
+                    >
+                        ⚽ Jogar Partida
+                    </button>
+
+
+                    <button
+                        id="btnContinuarTemporada"
+                        class="oculto"
+                    >
+                        ➡️ Continuar
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             HISTÓRICO
+        ========================================== -->
+
+        <section
+            id="telaHistorico"
+            class="tela oculto"
+        >
+
+            <div class="card">
+
+                <h2>
+                    🏆 Histórico
+                </h2>
+
+
+                <div id="titulosHistorico">
+                </div>
+
+
+                <hr>
+
+
+                <div id="listaHistorico">
+                </div>
+
+
+                <button
+                    id="btnVoltarHistorico"
+                    class="btn-secundario"
+                >
+                    Voltar
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="js/main.js"
+    ></script>
+
+</body>
+
+</html>

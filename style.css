@@ -1,0 +1,542 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        #111;
+
+    color:
+        #fff;
+}
+
+
+header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    padding:
+        15px 25px;
+
+    background:
+        #181818;
+
+    border-bottom:
+        1px solid #333;
+}
+
+
+main {
+
+    max-width:
+        1000px;
+
+    margin:
+        auto;
+
+    padding:
+        25px 15px;
+}
+
+
+.card {
+
+    background:
+        #1c1c1c;
+
+    border:
+        1px solid #333;
+
+    border-radius:
+        12px;
+
+    padding:
+        25px;
+
+    margin-bottom:
+        20px;
+}
+
+
+h1,
+h2,
+h3 {
+
+    margin-top:
+        0;
+}
+
+
+label {
+
+    display:
+        block;
+
+    margin-top:
+        15px;
+
+    margin-bottom:
+        7px;
+
+    font-weight:
+        bold;
+}
+
+
+input,
+select {
+
+    width:
+        100%;
+
+    padding:
+        12px;
+
+    border-radius:
+        7px;
+
+    border:
+        1px solid #444;
+
+    background:
+        #111;
+
+    color:
+        white;
+
+    font-size:
+        16px;
+}
+
+
+button {
+
+    padding:
+        11px 16px;
+
+    border:
+        none;
+
+    border-radius:
+        7px;
+
+    background:
+        #2d7cff;
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    font-size:
+        15px;
+
+    margin:
+        5px;
+}
+
+
+button:hover {
+
+    opacity:
+        0.85;
+}
+
+
+.btn-secundario {
+
+    background:
+        #444;
+}
+
+
+.menu {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px, 1fr)
+        );
+
+    gap:
+        10px;
+
+    margin-top:
+        25px;
+}
+
+
+.menu button {
+
+    width:
+        100%;
+
+    margin:
+        0;
+}
+
+
+.info-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
+
+    gap:
+        12px;
+
+    margin:
+        20px 0;
+}
+
+
+.info-grid > div {
+
+    background:
+        #111;
+
+    border:
+        1px solid #333;
+
+    border-radius:
+        8px;
+
+    padding:
+        15px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        6px;
+}
+
+
+.jogador {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        15px;
+
+    margin-bottom:
+        10px;
+
+    background:
+        #111;
+
+    border:
+        1px solid #333;
+
+    border-radius:
+        8px;
+}
+
+
+.jogador-info {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+}
+
+
+.jogador-nome {
+
+    font-size:
+        18px;
+
+    font-weight:
+        bold;
+}
+
+
+.jogador-detalhes {
+
+    color:
+        #aaa;
+}
+
+
+.valor {
+
+    color:
+        #72d572;
+}
+
+
+.escalacao-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(150px, 1fr)
+        );
+
+    gap:
+        10px;
+
+    margin-bottom:
+        20px;
+}
+
+
+.slot {
+
+    padding:
+        12px;
+
+    background:
+        #111;
+
+    border:
+        1px solid #333;
+
+    border-radius:
+        8px;
+
+    text-align:
+        center;
+}
+
+
+.partida-card {
+
+    text-align:
+        center;
+
+    background:
+        #111;
+
+    border:
+        1px solid #333;
+
+    border-radius:
+        10px;
+
+    padding:
+        20px;
+
+    margin:
+        20px 0;
+}
+
+
+.botoes-partida {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    margin-top:
+        20px;
+}
+
+
+.vitoria {
+
+    text-align:
+        center;
+
+    padding:
+        20px;
+
+    margin:
+        15px 0;
+
+    border:
+        1px solid #286b28;
+
+    border-radius:
+        8px;
+
+    font-size:
+        22px;
+}
+
+
+.derrota {
+
+    text-align:
+        center;
+
+    padding:
+        20px;
+
+    margin:
+        15px 0;
+
+    border:
+        1px solid #6b2828;
+
+    border-radius:
+        8px;
+
+    font-size:
+        22px;
+}
+
+
+.desempenho-pos-jogo {
+
+    margin-top:
+        20px;
+
+    padding:
+        15px;
+
+    background:
+        #111;
+
+    border:
+        1px solid #333;
+
+    border-radius:
+        8px;
+}
+
+
+.linha-desempenho {
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    padding:
+        8px 0;
+
+    border-bottom:
+        1px solid #222;
+}
+
+
+.historico-card {
+
+    padding:
+        15px;
+
+    margin-bottom:
+        10px;
+
+    background:
+        #111;
+
+    border:
+        1px solid #333;
+
+    border-radius:
+        8px;
+}
+
+
+hr {
+
+    border:
+        none;
+
+    border-top:
+        1px solid #333;
+
+    margin:
+        25px 0;
+}
+
+
+.oculto {
+
+    display:
+        none !important;
+}
+
+
+@media (max-width: 600px) {
+
+    .jogador {
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+    }
+
+
+    .jogador button {
+
+        width:
+            100%;
+    }
+
+
+    header {
+
+        padding:
+            12px 15px;
+    }
+
+
+    main {
+
+        padding:
+            15px 10px;
+    }
+
+
+    .card {
+
+        padding:
+            18px;
+    }
+}
